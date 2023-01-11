@@ -42,11 +42,11 @@ function Nav() {
               <span className="ml-2">Page1</span>
             </Link>
             <Link
-              to="/page2"
+              to="/profil"
               className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
             >
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
-              <span className="ml-2">Page2</span>
+              <span className="ml-2">Profil</span>
             </Link>
 
             <Link
