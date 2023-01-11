@@ -5,8 +5,8 @@ import "./Nav.css";
 function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <div>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-slate-500">
+    <div className="relative">
+      <nav className="absolute flex flex-wrap items-center justify-between px-2 py-3 bg-transparent w-full">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
