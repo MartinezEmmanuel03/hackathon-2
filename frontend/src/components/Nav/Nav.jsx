@@ -6,7 +6,7 @@ function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <div>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-slate-500 mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-slate-500">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
@@ -31,9 +31,7 @@ function Nav() {
             </button>
           </div>
           <div
-            className={`lg:flex flex-grow items-center${
-              navbarOpen ? " flex" : " hidden"
-            }`}
+            className={`lg:flex justify-end${navbarOpen ? " flex" : " hidden"}`}
             id="example-navbar-danger"
           >
             <Link
