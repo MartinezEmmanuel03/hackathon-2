@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Footer from "@components/Footer/Footer";
 import Nav from "@components/Nav/Nav";
 import Page1 from "@pages/Page1";
 import Page2 from "@pages/Page2";
@@ -9,6 +8,8 @@ import Information from "@pages/Back-office/Information";
 import Commentary from "@pages/Back-office/Commentary";
 import Rental from "@pages/Back-office/Rental";
 import OneVehicule from "@pages/OneVehicule";
+import Footer from "@components/Footer/Footer";
+
 import Home from "./pages/Home";
 import "./App.css";
 
@@ -20,7 +21,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/page1" element={<Page1 />} />
         <Route path="/page2" element={<Page2 />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/vehicule" element={<OneVehicule />} />
         <Route path="/Dashboard" element={<Dashboard />}>
           <Route path="Information" element={<Information />} />
