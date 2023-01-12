@@ -44,7 +44,7 @@ export default function Home() {
       </div>
       <h2 className="md:text-3xl font-bold mb-4 mt-4 text-center">
         Ces voitures vous ont toujours fait rêver? Ne cherchez pas plus loin!
-        Nous lesavons!
+        Nous les avons!
       </h2>
       <VehiculeCard />
     </div>
