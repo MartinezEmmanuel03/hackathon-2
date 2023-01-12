@@ -1,18 +1,6 @@
 import React from "react";
-// import apiConnexion from "../services/apiConnexion";
 
 function OneVehicule() {
-  // const [vehicule, setVehicule] = useState();
-
-  // useEffect(() => {
-  //   apiConnexion
-  //     .get(`/vehicule/:id`)
-  //     .then((res) => {
-  //       setVehicule(res.data);
-  //     })
-  //     .catch((err) => console.error(err));
-  // }, []);
-
   return (
     <div>
       <div className="rentButton flex justify-center">
@@ -20,9 +8,9 @@ function OneVehicule() {
           type="button"
           className="relative w-36 mt-10 mb-10 h-12 ml-4 overflow-hidden font-semibold rounded-xl bg-gray-700 text-white hover:bg-gray-900"
         >
-          Rent Me
+          Louez moi
           <span className="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 dark:bg-green-500">
-            Free
+            Dispo
           </span>
         </button>
       </div>
@@ -49,11 +37,11 @@ function OneVehicule() {
               </p>
             </li>
             <li className="mb-5">
-              Kilometer:
+              Kilométrage:
               <p>Lorem, ipsum dolor.</p>
             </li>
             <li className="mb-5">
-              Technical sheets:
+              Fiche technique:
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptate, tempore exercitationem provident veniam ex porro
@@ -65,12 +53,12 @@ function OneVehicule() {
               </p>
             </li>
             <li className="mb-5">
-              Location:
+              Localisation:
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </li>
-            <li className="mb-5">Availablity dates:</li>
+            <li className="mb-5">Dates de disponibilitées:</li>
             <li className="mb-5">
-              Remark:
+              Commentaires:
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
                 mollitia enim quas incidunt sit provident pariatur recusandae
