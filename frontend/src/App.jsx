@@ -7,8 +7,8 @@ import Information from "@pages/Back-office/Information";
 import Commentary from "@pages/Back-office/Commentary";
 import Rental from "@pages/Back-office/Rental";
 import Profil from "@pages/Profil";
-import Connexion from "@components/Connexion";
 import AllVehicules from "@pages/AllVehicules";
+import Connexion from "@components/Connexion";
 
 import Home from "./pages/Home";
 
