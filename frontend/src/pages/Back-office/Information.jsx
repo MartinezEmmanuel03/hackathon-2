@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import instance from "@services/apiConnexion";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 import ConnectForm from "@components/ConnectForm";
 import ButtonTemplate from "@components/ButtonTemplate";
