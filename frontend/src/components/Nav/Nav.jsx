@@ -32,8 +32,8 @@ function Nav() {
             </button>
           </div>
           <div
-            className={`lg:flex justify-end${
-              navbarOpen ? " flex-col" : " hidden"
+            className={`lg:flex justify-end bg-[#0E0C00]${
+              navbarOpen ? " flex" : " hidden"
             }`}
             id="example-navbar-danger"
           >
