@@ -1,5 +1,5 @@
-import img1 from "../assets/404.jpg"
-import img2 from "../assets/magnum.gif"
+import img1 from "../assets/404.jpg";
+import img2 from "../assets/magnum.gif";
 
 function Page404() {
   return (
@@ -8,14 +8,15 @@ function Page404() {
         <img alt="404" src={img1} className="w-full" />
       </div>
       <div>
-        <p className="text-2xl md:text-7xl  font-bold absolute bottom-3/4 md:bottom-1/2 text-white text-center bg-black bg-opacity-30">Désolé le modèle 404 n'est pas disponible</p>
+        <p className="text-2xl md:text-7xl  font-bold absolute bottom-3/4 md:bottom-1/2 text-white text-center bg-black bg-opacity-30">
+          Désolé le modèle 404 n'est pas disponible
+        </p>
       </div>
       <div className="md:hidden">
         <img alt="gif magnum" src={img2} />
       </div>
     </div>
-
-  )
+  );
 }
-4
-export default Page404
+
+export default Page404;
