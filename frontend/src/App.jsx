@@ -9,10 +9,11 @@ import Rental from "@pages/Back-office/Rental";
 import Profil from "@pages/Profil";
 import AllVehicules from "@pages/AllVehicules";
 import Connexion from "@components/Connexion";
-
+import Page404 from "@pages/Page404";
 import Home from "./pages/Home";
 
 import "./App.css";
+
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="vehicules" element={<AllVehicules />} />
           <Route path="profil" element={<Profil />} />
           <Route path="page3" element={<Page3 />} />
+          <Route path="*" element={<Page404 />} />
         </Route>
         <Route path="/Dashboard" element={<Dashboard />}>
           <Route path="Information" element={<Information />} />
