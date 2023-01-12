@@ -7,7 +7,7 @@ class VehiculeManager extends AbstractManager {
 
   rand(number) {
     return this.connection.query(
-      `select photo, nameV, film from  ${this.table} ORDER BY rand() LIMIT ?`,
+      `select id, photo, nameV, film from  ${this.table} ORDER BY rand() LIMIT ?`,
       [number]
     );
   }
