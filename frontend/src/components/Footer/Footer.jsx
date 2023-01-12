@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="bg-sky-700 text-black">
-      <div className="flex flex-col md:flex-row ">
-        <div className="flex  flex-col md:w-1/3 ">
-          <div className="flex justify-around mt-6">
+    <div className="bg-gray-300 text-black">
+      <div className="flex flex-col md:flex-row">
+        <div className="flex md:w-1/3">
+          <div className="flex md:flex-col pl-10 justify-around mt-6">
             <Link to="/">
               <h2 className="text-xl font-bold hover:text-white m-2">
                 Nos offres

@@ -17,7 +17,7 @@ function Nav() {
               Home
             </Link>
             <button
-              className="btn text-white cursor-pointer text-xl leading-none px-1 pb-2 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="btn text-white cursor-pointer text-xl leading-none pt-3 px-1 pb-2 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -32,8 +32,8 @@ function Nav() {
             </button>
           </div>
           <div
-            className={`lg:flex justify-end${
-              navbarOpen ? " flex-col" : " hidden"
+            className={`lg:flex justify-end bg-[#202325]${
+              navbarOpen ? " flex" : " hidden"
             }`}
             id="example-navbar-danger"
           >
@@ -69,7 +69,7 @@ function Nav() {
             </Link>
             <Link to="/login">
               <img
-                className="inline place-content-center m-1"
+                className="inline place-content-center m-1 pt-1"
                 src={Logo}
                 alt="login"
               />
