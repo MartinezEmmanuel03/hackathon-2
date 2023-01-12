@@ -27,6 +27,7 @@ const read = (req, res) => {
       res.sendStatus(500);
     });
 };
+
 const edit = (req, res) => {
   const users = req.body;
 
