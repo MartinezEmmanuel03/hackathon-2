@@ -6,19 +6,19 @@ function Footer() {
     <div className="bg-gray-300 text-black">
       <div className="flex flex-col md:flex-row">
         <div className="flex md:w-1/3">
-          <div className="flex md:flex-col pl-10 justify-around mt-6">
+          <div className="flex md:flex-col pl-12 justify-around mt-6">
             <Link to="/">
-              <h2 className="text-xl font-bold hover:text-white m-2">
+              <h2 className="text-base font-bold hover:text-white m-2 md:text-xl">
                 Nos offres
               </h2>
             </Link>
             <Link to="/">
-              <h2 className="text-xl font-bold hover:text-white m-2">
+              <h2 className="text-base font-bold hover:text-white m-2 md:text-xl">
                 A propos
               </h2>
             </Link>
             <Link to="/">
-              <h2 className="text-xl font-bold hover:text-white m-2">
+              <h2 className="text-base font-bold hover:text-white m-2 md:text-xl">
                 Nos véhicules
               </h2>
             </Link>

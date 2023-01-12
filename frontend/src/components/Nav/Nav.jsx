@@ -6,9 +6,9 @@ import "./Nav.css";
 function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <div className="relative bg">
-      <nav className="absolute flex flex-wrap items-center justify-between px-2 pl-3 pr-0 bg-transparent w-full">
-        <div className="container ps-12 mx-auto flex justify-end flex-wrap items-center md:justify-between ">
+    <div className="relative">
+      <nav className="absolute flex flex-wrap items-center justify-between px-2 pl-3 pr-0 w-full bg-[#1F2225]">
+        <div className="container ps-12 mx-auto flex justify-end flex-wrap items-center md:justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
               to="/"
@@ -32,7 +32,7 @@ function Nav() {
             </button>
           </div>
           <div
-            className={`lg:flex justify-end bg-[#202325]${
+            className={`lg:flex justify-end bg-[#1F2225]${
               navbarOpen ? " flex" : " hidden"
             }`}
             id="example-navbar-danger"
@@ -67,13 +67,15 @@ function Nav() {
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
               <span className="ml-2 md:text-xl">Dashboard</span>
             </Link>
-            <Link to="/login">
-              <img
-                className="inline place-content-center m-1 pt-1"
-                src={Logo}
-                alt="login"
-              />
-            </Link>
+            <div className="md:flex justify-end">
+              <Link to="/login">
+                <img
+                  className="inline place-content-center m-1 pt-1"
+                  src={Logo}
+                  alt="login"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
