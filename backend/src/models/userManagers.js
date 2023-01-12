@@ -25,5 +25,11 @@ class UsersManager extends AbstractManager {
       ]
     );
   }
+
+  login(email) {
+    return this.connection.query("select * from users where email = ?", [
+      email,
+    ]);
+  }
 }
 module.exports = UsersManager;

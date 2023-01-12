@@ -8,6 +8,7 @@ router.get("/vehicules", VehiculeController.browse);
 router.get("/vehicule/random", VehiculeController.random);
 router.get("/vehicule/:id", VehiculeController.read);
 
+router.post("/login", usersControllers.validateUser);
 router.get("/users", usersControllers.browse);
 router.get("/users/:id", usersControllers.read);
 router.put("/users/:id", usersControllers.edit);
