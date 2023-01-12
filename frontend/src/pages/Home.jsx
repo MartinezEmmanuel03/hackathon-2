@@ -62,9 +62,11 @@ export default function Home() {
         Ces voitures vous ont toujours fait rêver? Ne cherchez pas plus loin!
         Nous les avons!
       </h2>
-      {vehicules.map((vehicule) => (
-        <VehiculeCard vehicule={vehicule} key={vehicule.id} />
-      ))}
+      <div className="md:flex md:justify-around md:w-5/6 md:mx-auto">
+        {vehicules.map((vehicule) => (
+          <VehiculeCard vehicule={vehicule} key={vehicule.id} />
+        ))}
+      </div>
     </div>
   );
 }
