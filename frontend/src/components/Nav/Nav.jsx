@@ -6,7 +6,7 @@ import "./Nav.css";
 function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <div className="relative">
+    <div className="relative bg">
       <nav className="absolute flex flex-wrap items-center justify-between px-2 pl-3 pr-0 bg-transparent w-full">
         <div className="container ps-12 mx-auto flex justify-end flex-wrap items-center md:justify-between ">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
