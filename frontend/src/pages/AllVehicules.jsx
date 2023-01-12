@@ -16,8 +16,8 @@ function AllVehicules() {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-center text-2xl mt-5 mb-5 font-bold">
+    <div className="pt-16 bg-gray-200">
+      <h1 className="text-center text-2xl mb-5 font-bold ">
         Nos Véhicules
       </h1>
       <div className="ourVehicules">

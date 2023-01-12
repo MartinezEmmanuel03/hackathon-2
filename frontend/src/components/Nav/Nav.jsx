@@ -7,8 +7,8 @@ function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <div className="relative">
-      <nav className="absolute flex flex-wrap items-center justify-between px-2 pl-3 pr-0 bg-transparent w-full">
-        <div className="container ps-12 mx-auto flex justify-end flex-wrap items-center md:justify-between ">
+      <nav className="absolute flex flex-wrap items-center justify-between px-2 pl-3 pr-0 bg-transparent w-full bg-[#202325]">
+        <div className="container ps-12 mx-auto flex justify-end flex-wrap items-center md:justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
               to="/"
@@ -17,7 +17,7 @@ function Nav() {
               Home
             </Link>
             <button
-              className="btn text-white cursor-pointer text-xl leading-none px-1 pb-2 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="btn text-white cursor-pointer text-xl leading-none pt-3 px-1 pb-2 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -32,7 +32,7 @@ function Nav() {
             </button>
           </div>
           <div
-            className={`lg:flex justify-end bg-[#0E0C00]${
+            className={`lg:flex justify-end bg-[#202325]${
               navbarOpen ? " flex" : " hidden"
             }`}
             id="example-navbar-danger"
@@ -69,7 +69,7 @@ function Nav() {
             </Link>
             <Link to="/login">
               <img
-                className="inline place-content-center m-1"
+                className="inline place-content-center m-1 pt-1"
                 src={Logo}
                 alt="login"
               />
