@@ -4,6 +4,7 @@ const usersControllers = require("./controllers/usersControllers");
 
 const router = express.Router();
 
+router.get("/vehicules", VehiculeController.browse);
 router.get("/vehicule/random", VehiculeController.random);
 router.get("/vehicule/:id", VehiculeController.read);
 

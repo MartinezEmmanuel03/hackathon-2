@@ -1,8 +1,14 @@
 const AbstractManager = require("./AbstractManager");
 
-class VehiculeManager extends AbstractManager {
+class vehiculeManager extends AbstractManager {
   constructor() {
     super({ table: "vehicule" });
+  }
+
+  findAllForCards() {
+    return this.connection.query(
+      `select photo, nameV, film, id from  ${this.table}`
+    );
   }
 
   rand(number) {
@@ -13,4 +19,4 @@ class VehiculeManager extends AbstractManager {
   }
 }
 
-module.exports = VehiculeManager;
+module.exports = vehiculeManager;
