@@ -8,6 +8,7 @@ import Information from "@pages/Back-office/Information";
 import Commentary from "@pages/Back-office/Commentary";
 import Rental from "@pages/Back-office/Rental";
 import Profil from "@pages/Profil";
+import Connexion from "@components/Connexion";
 import Home from "./pages/Home";
 import "./App.css";
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/login" element={<Connexion />} />
         <Route path="/" element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="page1" element={<Page1 />} />
