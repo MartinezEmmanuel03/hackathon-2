@@ -16,6 +16,19 @@ const read = (req, res) => {
     });
 };
 
+const random = (req, res) => {
+  models.vehicule
+    .rand(3)
+    .then(([rows]) => {
+      res.send(rows);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 module.exports = {
   read,
+  random,
 };
