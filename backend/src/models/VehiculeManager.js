@@ -4,6 +4,13 @@ class VehiculeManager extends AbstractManager {
   constructor() {
     super({ table: "vehicule" });
   }
+
+  rand(number) {
+    return this.connection.query(
+      `select id, photo, nameV, film from  ${this.table} ORDER BY rand() LIMIT ?`,
+      [number]
+    );
+  }
 }
 
 module.exports = VehiculeManager;

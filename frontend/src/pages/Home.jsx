@@ -1,9 +1,20 @@
+import { useEffect, useState } from "react";
+import instance from "@services/apiConnexion";
 import VehiculeCard from "@components/VehiculeCard";
 import icon1 from "@assets/loupe.png";
 import img1 from "../assets/kitt2.jpg";
 import "@pages/home.css";
 
 export default function Home() {
+  const [vehicules, setVehicules] = useState([]);
+
+  useEffect(() => {
+    instance
+      .get("./vehicule/random")
+      .then((res) => setVehicules(res.data))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div>
       <div className="w-full flex justify-center">
@@ -51,7 +62,9 @@ export default function Home() {
         Ces voitures vous ont toujours fait rêver? Ne cherchez pas plus loin!
         Nous les avons!
       </h2>
-      <VehiculeCard />
+      {vehicules.map((vehicule) => (
+        <VehiculeCard vehicule={vehicule} key={vehicule.id} />
+      ))}
     </div>
   );
 }
