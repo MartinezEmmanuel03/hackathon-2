@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import VehiculeCard from "@components/VehiculeCard";
+
 import apiConnexion from "../services/apiConnexion";
-import CatalogueCard from "../components/CatalogueCard";
 
 function AllVehicules() {
   const [vehicules, setVehicules] = useState([]);
@@ -21,7 +22,7 @@ function AllVehicules() {
       </h1>
       <div className="ourVehicules">
         {vehicules.map((vehicule) => (
-          <CatalogueCard vehicule={vehicule} key={vehicule.nameV} />
+          <VehiculeCard vehicule={vehicule} key={vehicule.nameV} />
         ))}
       </div>
     </div>

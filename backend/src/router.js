@@ -1,12 +1,12 @@
 const express = require("express");
-const vehiculeController = require("./controllers/vehiculeController");
-const vehiculesController = require("./controllers/vehiculesController");
+const VehiculeController = require("./controllers/VehiculeController");
 const usersControllers = require("./controllers/usersControllers");
 
 const router = express.Router();
 
-router.get("/vehicules", vehiculesController.browse);
-router.get("/vehicules/:id", vehiculeController.read);
+router.get("/vehicules", VehiculeController.browse);
+router.get("/vehicule/random", VehiculeController.random);
+router.get("/vehicule/:id", VehiculeController.read);
 
 router.get("/users", usersControllers.browse);
 router.get("/users/:id", usersControllers.read);
