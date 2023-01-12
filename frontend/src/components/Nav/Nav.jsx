@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "@assets/logo.svg";
 import "./Nav.css";
 
 function Nav() {
@@ -7,7 +8,7 @@ function Nav() {
   return (
     <div className="relative">
       <nav className="absolute flex flex-wrap items-center justify-between px-2 pl-3 pr-0 bg-transparent w-full">
-        <div className="container ps-12 mx-auto flex justify-center flex-wrap items-center md:justify-between ">
+        <div className="container ps-12 mx-auto flex justify-end flex-wrap items-center md:justify-between ">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
               to="/"
@@ -27,11 +28,13 @@ function Nav() {
                   <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10" />
                 </svg>
               </span>
-              <span className="text">MENU</span>
+              <span className="text-sm flex justify-end">MENU</span>
             </button>
           </div>
           <div
-            className={`lg:flex justify-end${navbarOpen ? " flex" : " hidden"}`}
+            className={`lg:flex justify-end${
+              navbarOpen ? " flex-col" : " hidden"
+            }`}
             id="example-navbar-danger"
           >
             <Link
@@ -47,7 +50,7 @@ function Nav() {
             >
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
 
-              <span className="ml-2">Profil</span>
+              <span className="ml-2 md:text-xl">Profil</span>
             </Link>
 
             <Link
@@ -63,6 +66,13 @@ function Nav() {
             >
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
               <span className="ml-2 md:text-xl">Dashboard</span>
+            </Link>
+            <Link to="/login">
+              <img
+                className="inline place-content-center m-1"
+                src={Logo}
+                alt="login"
+              />
             </Link>
           </div>
         </div>
