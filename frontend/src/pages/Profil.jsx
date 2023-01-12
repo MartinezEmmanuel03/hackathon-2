@@ -1,9 +1,10 @@
+import VehiculeProfilCard from "@components/VehiculeProfilCard";
 import React from "react";
 
 function Profil() {
   return (
     <div className="pt-12 md:flex md:w-full md:content-center">
-      <section className="formprofil m-3 mr-3 p-6 md:m-8 md:mt-10 w-2/5 bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 md:w-1/3 md:h-11/12 md:my-0">
+      <section className=" m-3 mr-3 p-6 md:m-8 md:mt-10 md:mb-5  bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 md:w-1/3 md:h-11/12 md:my-0">
         <h1 className="text-xl text-center font-bold text-white capitalize dark:text-white">
           Formulaire Profil
         </h1>
@@ -74,6 +75,14 @@ function Profil() {
           </div>
         </form>
       </section>
+      <div className="md:flex">
+        <div className=" md:mb-5 md:mt-20 md:mr-5">
+          <VehiculeProfilCard />
+        </div>
+        <div className="md:mb-5 md:mt-20">
+          <VehiculeProfilCard />
+        </div>
+      </div>
     </div>
   );
 }
