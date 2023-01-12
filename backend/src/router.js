@@ -5,7 +5,7 @@ const usersControllers = require("./controllers/usersControllers");
 
 const router = express.Router();
 
-router.get("/vehicules/", vehiculesController.browse);
+router.get("/vehicules", vehiculesController.browse);
 router.get("/vehicules/:id", vehiculeController.read);
 
 router.get("/users", usersControllers.browse);

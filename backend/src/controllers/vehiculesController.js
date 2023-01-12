@@ -2,7 +2,7 @@ const models = require("../models");
 
 const browse = (req, res) => {
   models.vehicule
-    .findAll()
+    .findAllForCards()
     .then(([rows]) => {
       res.send(rows);
     })
