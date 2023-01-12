@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="text-center">
+    <div className="text-center bg-gray-100 pb-3">
       <div className="w-full flex justify-center">
         <div className="absolute bottom-3/4 md:bottom-1/4 flex flex-col justify-center">
           <h2 className="text-center text-white md:text-4xl">
