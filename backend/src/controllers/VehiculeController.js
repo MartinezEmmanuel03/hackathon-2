@@ -16,6 +16,18 @@ const read = (req, res) => {
     });
 };
 
+const browse = (req, res) => {
+  models.vehicule
+    .findAllForCards()
+    .then(([rows]) => {
+      res.send(rows);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 const random = (req, res) => {
   models.vehicule
     .rand(3)
@@ -31,4 +43,5 @@ const random = (req, res) => {
 module.exports = {
   read,
   random,
+  browse,
 };

@@ -34,7 +34,7 @@ function AddVehicule() {
           type="button"
           className="bg-gray-900 rounded-full text-white w-32 mt-5 mb-2"
         >
-          Delete vehicule
+          Ajout vehicule
         </button>
       </div>
     </div>

@@ -11,6 +11,7 @@ import AllVehicules from "@pages/AllVehicules";
 import Connexion from "@components/Connexion";
 
 import Home from "./pages/Home";
+
 import "./App.css";
 
 function App() {
