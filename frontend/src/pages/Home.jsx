@@ -1,6 +1,7 @@
 import VehiculeCard from "@components/VehiculeCard";
 import icon1 from "@assets/loupe.png";
 import img1 from "../assets/kitt2.jpg";
+import "@pages/home.css";
 
 export default function Home() {
   return (
@@ -24,10 +25,14 @@ export default function Home() {
                 className="w-1/4 rounded-lg ml-4 pl-2 text-xl"
               />
               <input
+                type="date"
+                name="Date_depart"
                 placeholder="Date de départ"
                 className="w-1/4 rounded-lg ml-4 pl-2 text-xl"
               />
               <input
+                type="date"
+                name="Date_retour"
                 placeholder="Date de retour"
                 className="w-1/4 rounded-lg ml-4 pl-2 text-xl"
               />
