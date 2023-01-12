@@ -26,6 +26,14 @@ export default function NavP() {
             </Link>
           </div>
         </div>
+        <div className="flex">
+          <Link
+            to="/"
+            className="flex hover:text-secondary focus:text-secondary text-white px-3 py-2  w-full"
+          >
+            <p className="text-base leading-4">Home</p>
+          </Link>
+        </div>
       </div>
     </div>
   );
