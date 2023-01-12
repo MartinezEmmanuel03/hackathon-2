@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import apiConnexion from "@services/apiConnexion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const toastifyConfig = {
+  position: "bottom-right",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+};
 
 function Connexion() {
   const [connexion, setConnexion] = useState({
-    utilisateur: "",
+    email: "",
     mot_de_passe: "",
   });
 
@@ -17,7 +30,8 @@ function Connexion() {
     apiConnexion
       .post("/login", connexion)
       .then((res) => {
-        res.sendStatus(200);
+        toast.success(`Bonjour à vous`, toastifyConfig);
+        res.sendStatus(201);
       })
       .catch((err) => {
         console.error(err);
@@ -40,6 +54,8 @@ function Connexion() {
             </label>
             <input
               onChange={(e) => handleConnexion(e.target.name, e.target.value)}
+              name="email"
+              value={connexion.email}
               type="email"
               className="block w-full px-4 py-2 mt-2 text-black-700 bg-white border rounded-md focus:border-black-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
@@ -54,6 +70,8 @@ function Connexion() {
             <input
               onChange={(e) => handleConnexion(e.target.name, e.target.value)}
               type="password"
+              name="mot_de_passe"
+              value={connexion.mot_de_passe}
               className="block w-full px-4 py-2 mt-2 text-black-700 bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
@@ -68,6 +86,18 @@ function Connexion() {
           </div>
         </form>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }
