@@ -17,9 +17,7 @@ function AllVehicules() {
 
   return (
     <div className="pt-16 bg-gray-200">
-      <h1 className="text-center text-2xl mb-5 font-bold ">
-        Nos Véhicules
-      </h1>
+      <h1 className="text-center text-2xl mb-5 font-bold ">Nos Véhicules</h1>
       <div className="ourVehicules">
         {vehicules.map((vehicule) => (
           <VehiculeCard vehicule={vehicule} key={vehicule.nameV} />
