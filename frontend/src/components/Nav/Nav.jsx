@@ -6,9 +6,9 @@ import "./Nav.css";
 function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <div className="relative">
-      <nav className="absolute flex flex-wrap items-center justify-between px-2 pl-3 pr-0 bg-transparent w-full bg-[#202325]">
-        <div className="container ps-12 mx-auto flex justify-end flex-wrap items-center md:justify-between">
+    <div className="relative bg">
+      <nav className="absolute flex flex-wrap items-center justify-between px-2 pl-3 pr-0 bg-transparent w-full">
+        <div className="container ps-12 mx-auto flex justify-end flex-wrap items-center md:justify-between ">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
               to="/"
@@ -38,11 +38,11 @@ function Nav() {
             id="example-navbar-danger"
           >
             <Link
-              to="/page1"
+              to="/vehicules"
               className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
             >
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
-              <span className="ml-2 md:text-xl">Page1</span>
+              <span className="ml-2 md:text-xl">Catalogue</span>
             </Link>
             <Link
               to="/profil"
