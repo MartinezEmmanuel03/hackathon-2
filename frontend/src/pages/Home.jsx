@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import instance from "@services/apiConnexion";
 import VehiculeCard from "@components/VehiculeCard";
 import icon1 from "@assets/loupe.png";
@@ -16,13 +17,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="text-center">
       <div className="w-full flex justify-center">
         <div className="absolute bottom-3/4 md:bottom-1/4 flex flex-col justify-center">
           <h2 className="text-center text-white md:text-4xl">
             Mettez une voiture de rêve dans votre vie
           </h2>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-4">
             <button
               type="button"
               className="rounded bg-white text-black w-1/2 font-bold md:text-4xl md:mt-8 md:hidden"
@@ -67,6 +68,11 @@ export default function Home() {
           <VehiculeCard vehicule={vehicule} key={vehicule.id} />
         ))}
       </div>
+      <Link to="/vehicules" className="">
+        <div className="bg-black text-white rounded-lg mx-auto text-2xl mb-4 w-2/5 md:w-1/6">
+          Voir tout
+        </div>
+      </Link>
     </div>
   );
 }
