@@ -69,8 +69,11 @@ export default function Home() {
         ))}
       </div>
       <Link to="/vehicules" className="">
-        <div className="bg-black text-white rounded-lg mx-auto text-2xl mb-4 w-2/5 md:w-1/6">
-          Voir tout
+        <div className="button learn-more">
+          <span className="circle" aria-hidden="true">
+            <span className="icon arrow" />
+          </span>
+          <span className="button-text">Voir tout</span>
         </div>
       </Link>
     </div>
