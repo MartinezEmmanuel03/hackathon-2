@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Page1 from "@pages/Page1";
 import Dashboard from "@pages/Layout/Dashboard";
 import PublicLayout from "@pages/Layout/PublicLayout";
 import Information from "@pages/Back-office/Information";
