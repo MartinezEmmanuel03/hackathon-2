@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Page3 from "@pages/Page3";
+import Catalogue from "@pages/Catalogue";
 import Dashboard from "@pages/Layout/Dashboard";
 import PublicLayout from "@pages/Layout/PublicLayout";
 import Information from "@pages/Back-office/Information";
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="vehicules" element={<AllVehicules />} />
           <Route path="profil" element={<Profil />} />
-          <Route path="page3" element={<Page3 />} />
+          <Route path="catalogue" element={<Catalogue />} />
           <Route path="*" element={<Page404 />} />
         </Route>
         <Route path="/Dashboard" element={<Dashboard />}>

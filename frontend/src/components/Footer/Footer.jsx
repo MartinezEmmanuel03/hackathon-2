@@ -20,7 +20,7 @@ function Footer() {
             <Link to="/profil">
               <h2 className="text-xl font-bold hover:text-white m-2">Profil</h2>
             </Link>
-            <Link to="/page">
+            <Link to="/catalogue">
               <h2 className="text-xl font-bold hover:text-white m-2">
                 Catalogue
               </h2>
