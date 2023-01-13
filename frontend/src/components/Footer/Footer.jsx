@@ -1,31 +1,56 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import linkedin from "@assets/linkedin.png";
+import twitter from "@assets/twitter.png";
+import facebook from "@assets/facebook.png";
+import youtube from "@assets/youtube.png";
+import instagram from "@assets/instagram.png";
 
 function Footer() {
   return (
-    <div className="bg-sky-700 text-black">
-      <div className="flex flex-col md:flex-row ">
-        <div className="flex  flex-col md:w-1/3 ">
-          <div className="flex justify-around mt-6">
+    <div className="bg-gray-300 text-black">
+      <div className="flex flex-col md:flex-row">
+        <div className="flex md:w-1/2">
+          <div className="flex md:flex-col pl-10 justify-around mt-6">
             <Link to="/">
               <h2 className="text-xl font-bold hover:text-white m-2">
-                Nos offres
+                Accueil
               </h2>
             </Link>
-            <Link to="/">
+            <Link to="/profil">
+              <h2 className="text-xl font-bold hover:text-white m-2">Profil</h2>
+            </Link>
+            <Link to="/catalogue">
               <h2 className="text-xl font-bold hover:text-white m-2">
-                A propos
+                Catalogue
               </h2>
             </Link>
-            <Link to="/">
+            <Link to="/dashboard">
               <h2 className="text-xl font-bold hover:text-white m-2">
-                Nos véhicules
+                Administration
               </h2>
             </Link>
           </div>
         </div>
+        <div className="flex flex-row justify-center items-center mb-4 md: md:ml-">
+          <a href="https://www.linkedin.com">
+            <img src={linkedin} alt="logo linkedin" className="w-12 m-3" />
+          </a>
+          <a href="https://twitter.com">
+            <img src={twitter} alt="logo twitter" className="w-12 m-3" />
+          </a>
+          <a href="https://www.facebook.com">
+            <img src={facebook} alt="logo facebook" className="w-12 m-3" />
+          </a>
+          <a href="https://www.youtube.com">
+            <img src={youtube} alt="logo youtube" className="w-12 m-3" />
+          </a>
+          <a href="https://www.instagram.com">
+            <img src={instagram} alt="logo instagram" className="w-12 m-3" />
+          </a>
+        </div>
         <div className="flex flex-row justify-center items-center mb-4 md:w-1/3" />
-        <div className=" text-center md:w-1/3 md:text-right md:pr-10">
+        <div className=" text-center md: md:text-right md:pr-10">
           <p className="font-bold text-xl mt-10">Contact</p>
           <div className="mb-7 font-medium">
             <br />

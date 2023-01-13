@@ -35,6 +35,15 @@ class vehiculeManager extends AbstractManager {
         vehicule.id_users,
       ]
     );
+  findByFilm(searchMovie) {
+    let query = `select film from ${this.table}`;
+    const value = [];
+    if (searchMovie) {
+      query += " where film like %";
+      value.push(`${searchMovie}%`);
+    }
+    query += "limit 5";
+    return this.connection.query(query, value);
   }
 }
 

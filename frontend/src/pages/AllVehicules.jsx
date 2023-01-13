@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import VehiculeCard from "@components/VehiculeCard";
+import SearchBarVehicules from "@components/SearchBarVehicules";
 
 import apiConnexion from "../services/apiConnexion";
 
@@ -16,13 +17,18 @@ function AllVehicules() {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-center text-2xl mt-5 mb-5 font-bold">
-        Nos Véhicules
-      </h1>
-      <div className="ourVehicules">
+    <div className="pt-16 bg-gray-200">
+      <div className="flex md:justify-evenly">
+        <h1 className="text-center text-2xl mb-5 mr-auto font-bold  mt-20">
+          Nos Véhicules
+        </h1>
+        <div className="m-1">
+          <SearchBarVehicules />
+        </div>
+      </div>
+      <div className="ourVehicules md:flex md:flex-wrap md:justify-center md:gap-10 bg-gray-200">
         {vehicules.map((vehicule) => (
-          <VehiculeCard vehicule={vehicule} key={vehicule.nameV} />
+          <VehiculeCard vehicule={vehicule} />
         ))}
       </div>
     </div>
