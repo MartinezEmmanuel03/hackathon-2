@@ -3,12 +3,12 @@ import instance from "@services/apiConnexion";
 import React, { useEffect, useState } from "react";
 
 function Profil() {
-  const [vehicule, setVehicules] = useState([]);
+  const [vehicule, setVehicule] = useState([]);
 
   useEffect(() => {
     instance
       .get("./vehicule/random")
-      .then((res) => setVehicules(res.data))
+      .then((res) => setVehicule(res.data))
       .catch((err) => console.error(err));
   }, []);
 
