@@ -10,6 +10,7 @@ import Profil from "@pages/Profil";
 import AllVehicules from "@pages/AllVehicules";
 import Connexion from "@components/Connexion";
 import Page404 from "@pages/Page404";
+import OneVehicule from "@pages/OneVehicule";
 import Home from "./pages/Home";
 
 import "./App.css";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="vehicules" element={<AllVehicules />} />
           <Route path="profil" element={<Profil />} />
+          <Route path="vehicules/:id" element={<OneVehicule />} />
           <Route path="catalogue" element={<Catalogue />} />
           <Route path="*" element={<Page404 />} />
         </Route>

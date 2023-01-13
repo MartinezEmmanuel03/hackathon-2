@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
+import apiConnexion from "../services/apiConnexion";
 
 function OneVehicule() {
+  const { id } = useParams();
+  const [vehicule, setVehicule] = useState([]);
+  const { lieu, photo, ficheTech, dateDispo, km, nameV, film } = vehicule;
+
+  useEffect(() => {
+    apiConnexion
+      .get(`/vehicule/${id}`)
+      .then((res) => {
+        setVehicule(res.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
-    <div>
+    <div className="md:flex md:flex-col-reverse">
       <div className="rentButton flex justify-center">
         <button
           type="button"
@@ -14,52 +30,47 @@ function OneVehicule() {
           </span>
         </button>
       </div>
-      <div className="vehicule md:flex md:ml-5">
-        <div className="vehiculePics md:w-full">
+      <div className="vehicule md:flex md:ml-5 md:items-center">
+        <div className="vehiculePics md:w-full md:flex md:h-2/3 bg-black">
           <img
-            src="https://media.discordapp.net/attachments/1022804708122968154/1062762258641469491/latest.png"
+            src={`${import.meta.env.VITE_BACKEND_URL}/${photo}`}
             alt="vehicule"
             className="md:w-full"
           />
         </div>
-        <div className="description w-8/12 ml-2 mr-2">
-          <h1 className="text-center mt-5 mb-5 font-bold">
-            Ford Explorer 4X4 Jurassic Park
-          </h1>
-          <ul className="mt-10 md:ml-5">
+        <div className="description w-screen ml-2 mr-2">
+          <h1 className="text-center mt-5 mb-5 font-bold">{nameV}</h1>
+          <h2 className="text-center">{film}</h2>
+          <ul className="mt-10 md:ml-5 text-center">
             <li className="mb-5">
-              Description:
-              <p>
+              <p className="text-start">Description:</p>
+
+              <p className="text-start">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aspernatur error veniam quia quisquam iure. Vitae beatae
                 cupiditate veniam, ad tempora ea nihil ex accusamus id dolores
                 non molestiae illo amet?
               </p>
             </li>
-            <li className="mb-5">
-              Kilométrage:
-              <p>Lorem, ipsum dolor.</p>
+            <li className="flex justify-between mb-5">
+              <p className="text-start">Kilométrage:</p>
+              <p>{km}</p>
+            </li>
+            <li className="flex justify-between mb-5">
+              <p className="text-start">Fiche technique:</p>
+              <p>{ficheTech}</p>
+            </li>
+            <li className="flex justify-between mb-5">
+              <p className="text-start">Localisation:</p>
+              <p>{lieu}</p>
+            </li>
+            <li className="flex justify-between mb-5">
+              <p className="text-start">Dates de disponibilitées:</p>
+              <p>{dateDispo}</p>
             </li>
             <li className="mb-5">
-              Fiche technique:
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate, tempore exercitationem provident veniam ex porro
-                perferendis recusandae voluptatem ea harum inventore deserunt
-                esse fugit blanditiis quasi magnam voluptatum natus at nostrum.
-                Voluptatibus est provident assumenda laboriosam nostrum! Impedit
-                consectetur voluptatum accusantium quas fugiat dicta dolorem.
-                Magnam eius eligendi tempora dolore.
-              </p>
-            </li>
-            <li className="mb-5">
-              Localisation:
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </li>
-            <li className="mb-5">Dates de disponibilitées:</li>
-            <li className="mb-5">
-              Commentaires:
-              <p>
+              <p className="text-start">Commentaires:</p>
+              <p className="text-start">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
                 mollitia enim quas incidunt sit provident pariatur recusandae
                 officia asperiores, iure odio. Unde provident, nam sint dicta
