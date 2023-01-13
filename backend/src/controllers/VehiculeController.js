@@ -27,6 +27,18 @@ const browse = (req, res) => {
       res.sendStatus(500);
     });
 };
+const find = (req, res) => {
+  const { searchVehicule } = req.query;
+  models.vehicule
+    .findByFilm(searchVehicule)
+    .then(([newVehicule]) => {
+      res.send(newVehicule);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
 
 const random = (req, res) => {
   models.vehicule
@@ -44,4 +56,5 @@ module.exports = {
   read,
   random,
   browse,
+  find,
 };

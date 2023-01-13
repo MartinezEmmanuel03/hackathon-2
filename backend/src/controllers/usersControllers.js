@@ -1,3 +1,5 @@
+const jwt = require("jsonwebtoken");
+const { verifyHash } = require("../service/Auth");
 const models = require("../models");
 
 const browse = (req, res) => {
@@ -27,6 +29,7 @@ const read = (req, res) => {
       res.sendStatus(500);
     });
 };
+
 const edit = (req, res) => {
   const users = req.body;
 
@@ -61,9 +64,43 @@ const add = (req, res) => {
     });
 };
 
+const validateUser = (req, res) => {
+  const { email } = req.body;
+
+  models.users
+    .login(email)
+    .then(async ([user]) => {
+      if (user[0]) {
+        if (await verifyHash(user[0].hashedPassword, req.body.mot_de_passe)) {
+          const myUser = { ...user[0] };
+          delete myUser.hashedPassword;
+          const token = jwt.sign(myUser, process.env.JWT_SECRET, {
+            expiresIn: "24h",
+          });
+
+          res
+            .status(201)
+            .cookie("access_token", token, {
+              httpOnly: true,
+            })
+            .json(myUser);
+        } else {
+          res.sendStatus(401);
+        }
+      } else {
+        res.sendStatus(401);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send("Error retrieving data from database");
+    });
+};
+
 module.exports = {
   browse,
   read,
   edit,
   add,
+  validateUser,
 };
