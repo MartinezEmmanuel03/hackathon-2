@@ -29,7 +29,7 @@ function VehiculeProfilCard({ vehicule }) {
           <p className="text-gray-600 text-xs" />
           <button
             type="button"
-            className="rounded-md border-r w-32 m-auto bg-gray-500  hover:bg-gray-800 text-white font-bold py-2 px-4 border-b-4 "
+            className="rounded-md border-r w-32 m-auto bg-gray-500 hover:bg-gray-800 text-white font-bold py-2 px-4 border-b-4 "
           >
             envoyer
           </button>
