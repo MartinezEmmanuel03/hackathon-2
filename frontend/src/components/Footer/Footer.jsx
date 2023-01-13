@@ -9,30 +9,32 @@ import instagram from "@assets/instagram.png";
 function Footer() {
   return (
     <div className="bg-gray-300 text-black">
-      <div className="flex flex-col md:flex-row">
-        <div className="flex md:w-1/2">
-          <div className="flex md:flex-col pl-10 justify-around mt-6">
+      <div className="flex flex-col  md:flex-row">
+        <div className="flex  md:w-1/2">
+          <div className="flex  md:flex-col pl-10 justify-around mt-6">
             <Link to="/">
-              <h2 className="text-xl font-bold hover:text-white m-2">
+              <h2 className="  text-base md:text-xl font-bold hover:text-white m-2">
                 Accueil
               </h2>
             </Link>
             <Link to="/profil">
-              <h2 className="text-xl font-bold hover:text-white m-2">Profil</h2>
+              <h2 className="text-base md:text-xl font-bold hover:text-white m-2">
+                Profil
+              </h2>
             </Link>
             <Link to="/catalogue">
-              <h2 className="text-xl font-bold hover:text-white m-2">
+              <h2 className="text-base md:text-xl font-bold hover:text-white m-2">
                 Catalogue
               </h2>
             </Link>
             <Link to="/dashboard">
-              <h2 className="text-xl font-bold hover:text-white m-2">
+              <h2 className=" text-base md:text-xl font-bold hover:text-white m-2">
                 Administration
               </h2>
             </Link>
           </div>
         </div>
-        <div className="flex flex-row justify-center items-center mb-4 md: md:ml-">
+        <div className="flex flex-row justify-center items-center mb-4 md: ">
           <a href="https://www.linkedin.com">
             <img src={linkedin} alt="logo linkedin" className="w-12 m-3" />
           </a>

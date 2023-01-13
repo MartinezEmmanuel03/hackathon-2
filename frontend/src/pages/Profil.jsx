@@ -14,7 +14,7 @@ function Profil() {
 
   return (
     <div className="pt-12 md:flex md:w-full md:content-center">
-      <section className=" m-3 mr-3 p-6 md:m-8 md:mt-10 md:mb-5  bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 md:w-1/3 md:h-11/12 md:my-0">
+      <section className=" ml-5 mr-5 mt-5 mb-5 p-6 md:m-8 md:mt-10 md:mb-5  bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 md:w-1/3 md:h-11/12 md:my-0">
         <h1 className="text-xl text-center font-bold text-white capitalize dark:text-white">
           Formulaire Profil
         </h1>
@@ -118,6 +118,28 @@ function Profil() {
                 className="block w-full px-4 py-2 mt-2  focus:outline-none focus:ring "
               />
             </div>
+
+            <div>
+              <label
+                className="text-white dark:text-gray-200"
+                htmlFor="telephone"
+              >
+                Téléphone
+              </label>
+              <input
+                id="telephone"
+                type="number"
+                required
+                className="block w-full px-4 py-2 mt-2  focus:outline-none focus:ring "
+              />
+            </div>
+
+            <button
+              type="button"
+              className="w-32 ml-20 bg-gray-300 mt-5 rounded-md  md:bg-gray-500  hover:bg-gray-800 text-white font-bold py-2 px-4 border-b-4 md:w-64"
+            >
+              envoyer
+            </button>
           </div>
         </form>
       </section>
