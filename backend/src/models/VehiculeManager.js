@@ -35,6 +35,8 @@ class vehiculeManager extends AbstractManager {
         vehicule.id_users,
       ]
     );
+  }
+
   findByFilm(searchMovie) {
     let query = `select film from ${this.table}`;
     const value = [];

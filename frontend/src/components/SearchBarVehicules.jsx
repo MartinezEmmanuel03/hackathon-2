@@ -24,7 +24,7 @@ function SearchBarVehicules() {
   };
 
   return (
-    <div className="mt-20">
+    <div>
       <div className="searchBar">
         <input
           className="rounded-lg w-full border-gray-900"

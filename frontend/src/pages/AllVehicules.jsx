@@ -17,12 +17,12 @@ function AllVehicules() {
   }, []);
 
   return (
-    <div className="pt-16 bg-gray-200">
-      <div className="flex md:justify-evenly">
-        <h1 className="text-center text-2xl mb-5 mr-auto font-bold  mt-20">
+    <div className="bg-gray-200">
+      <div className="flex flex-col items-center ">
+        <h1 className="text-center text-2xl mb-5 font-bold  mt-20">
           Nos Véhicules
         </h1>
-        <div className="m-1">
+        <div className="w-6/12 md:w-3/12 mb-5">
           <SearchBarVehicules />
         </div>
       </div>
