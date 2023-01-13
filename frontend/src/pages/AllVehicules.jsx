@@ -18,13 +18,15 @@ function AllVehicules() {
 
   return (
     <div>
-      <div className="flex md:justify-evenly bg-red-500">
-        <h1 className="text-center text-2xl mb-5 mr-auto font-bold  mt-20">
+      <div className="flex md:justify-evenly bg-gray-200">
+        <h1 className="text-center text-2xl mb-5 mr-auto font-bold mt-20 m-2">
           Nos Véhicules
         </h1>
-        <SearchBarVehicules />
+        <div className="m-1">
+          <SearchBarVehicules />
+        </div>
       </div>
-      <div className="ourVehicules md:flex md:flex-wrap md:justify-center md:gap-10">
+      <div className="ourVehicules md:flex md:flex-wrap md:justify-center md:gap-10 bg-gray-200">
         {vehicules.map((vehicule) => (
           <VehiculeCard vehicule={vehicule} />
         ))}
