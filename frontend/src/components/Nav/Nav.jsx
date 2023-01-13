@@ -38,15 +38,11 @@ function Nav() {
             id="example-navbar-danger"
           >
             <Link
-
               to="/a_propos"
               className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
             >
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
               <span className="ml-2 md:text-xl">A propos</span>
-
-           
-
             </Link>
             <Link
               to="/profil"
@@ -58,7 +54,7 @@ function Nav() {
             </Link>
 
             <Link
-              to="/catalogue"
+              to="/vehicules"
               className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
             >
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
