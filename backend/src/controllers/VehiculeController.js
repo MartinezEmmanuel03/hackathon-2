@@ -49,17 +49,16 @@ const add = (req, res) => {
     req.files.ft ? req.files.ft[0].filename : "/ft/cv.png"
   }`;
   vehicule = JSON.parse(vehicule);
-    models.vehicule
-      .insert(vehicule, vehiculePhoto, vehiculeft)
-      .then(([result]) => {
-        res.location(`/vehicules/${result.insertId}`).sendStatus(201);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.sendStatus(500);
-      });
+  models.vehicule
+    .insert(vehicule, vehiculePhoto, vehiculeft)
+    .then(([result]) => {
+      res.location(`/vehicules/${result.insertId}`).sendStatus(201);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
 };
-
 
 module.exports = {
   read,

@@ -36,7 +36,6 @@ class vehiculeManager extends AbstractManager {
       ]
     );
   }
-
 }
 
 module.exports = vehiculeManager;
