@@ -14,7 +14,7 @@ function Footer() {
           <div className="flex md:flex-col pl-10 justify-around mt-6">
             <Link to="/">
               <h2 className="text-xl font-bold hover:text-white m-2">
-                Acceuil
+                Accueil
               </h2>
             </Link>
             <Link to="/profil">
