@@ -23,6 +23,7 @@ function App() {
           <Route path="profil" element={<Profil />} />
           <Route path="vehicules/:id" element={<OneVehicule />} />
           <Route path="*" element={<Page404 />} />
+          <Route path="login" element={<Connexion />} />
         </Route>
         <Route path="/Dashboard" element={<Dashboard />}>
           <Route path="Information" element={<Information />} />

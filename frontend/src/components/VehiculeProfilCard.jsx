@@ -7,7 +7,7 @@ function VehiculeProfilCard({ vehicule }) {
     <div className="flex justify-center md:mb-5">
       <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg md:justify-center md:flex-wrap">
         <img
-          className=" w-full h-full md:h-auto object-cover md:w-48 rounded-t-lg md:rounded "
+          className="w-full h-full md:h-auto object-cover md:w-48 rounded-t-lg md:rounded "
           src={`${import.meta.env.VITE_BACKEND_URL}/${photo}`}
           alt="car"
         />
