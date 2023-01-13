@@ -4,7 +4,7 @@ function ConnectForm({ dataUsers, handleInputOnChange }) {
   return (
     <div className="flex flex-col items-center w-full pt-10 gap-y-7">
       <div className="flex flex-row">
-        <h1>First Name :</h1>
+        <h1>Prénom :</h1>
         <InputTemplate
           customWidth="cstm_width_XlInput"
           inputType="text"
@@ -15,7 +15,7 @@ function ConnectForm({ dataUsers, handleInputOnChange }) {
         />
       </div>
       <div className="flex flex-row">
-        <h1>First Name :</h1>
+        <h1>Nom :</h1>
         <InputTemplate
           customWidth="cstm_width_XlInput"
           inputType="text"
@@ -26,7 +26,7 @@ function ConnectForm({ dataUsers, handleInputOnChange }) {
         />
       </div>
       <div className="flex flex-row">
-        <h1>Location :</h1>
+        <h1>Ville :</h1>
         <InputTemplate
           customWidth="cstm_width_XlInput"
           inputType="text"
@@ -48,11 +48,11 @@ function ConnectForm({ dataUsers, handleInputOnChange }) {
         />
       </div>
       <div className="flex flex-row">
-        <h1>Password :</h1>
+        <h1>Mot de passe :</h1>
         <InputTemplate
           customWidth="cstm_width_XlInput"
           inputType="text"
-          textPlaceholder="password"
+          textPlaceholder="Mot de passe"
           value={dataUsers.password}
           methodOnChange={handleInputOnChange}
           name="Password"

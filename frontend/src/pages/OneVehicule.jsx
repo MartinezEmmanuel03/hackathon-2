@@ -10,6 +10,8 @@ function OneVehicule() {
   const [vehicule, setVehicule] = useState([]);
   const { lieu, photo, ficheTech, km, nameV, film } = vehicule;
 
+  const fiche = `${import.meta.env.VITE_BACKEND_URL}/${ficheTech}`;
+
   useEffect(() => {
     apiConnexion
       .get(`/vehicule/${id}`)
@@ -32,12 +34,12 @@ function OneVehicule() {
           </span>
         </button>
       </div>
-      <div className="vehicule md:flex md:ml-5 md:items-center">
+      <div className="vehicule md:flex md:ml-5 md:items-center mt-16">
         <div className="vehiculePics md:w-full md:flex md:h-2/3">
           <img
             src={`${import.meta.env.VITE_BACKEND_URL}/${photo}`}
             alt="vehicule"
-            className="imgOne shadow-slate-500 rounded-lg  md:w-full"
+            className="imgOne shadow-slate-500 rounded-lg md:w-full"
           />
         </div>
         <div className="description w-screen ml-2 mr-2">
@@ -60,7 +62,14 @@ function OneVehicule() {
             </li>
             <li className="flex justify-between mb-5">
               <p className="text-start font-bold">Fiche technique:</p>
-              <p>{ficheTech}</p>
+              <button
+                className="rentButton relative w-36 overflow-hidden font-semibold rounded-xl bg-gray-700 text-white hover:bg-gray-900"
+                type="button"
+              >
+                <a href={fiche} download>
+                  Ouvrir la fiche
+                </a>
+              </button>
             </li>
             <li className="flex justify-between mb-5">
               <p className="text-start font-bold">Localisation:</p>
