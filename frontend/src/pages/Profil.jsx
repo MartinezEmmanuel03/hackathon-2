@@ -109,7 +109,7 @@ function Profil() {
             </div>
             <div>
               <label className="text-white dark:text-gray-200" htmlFor="pays">
-                pays
+                Pays
               </label>
               <input
                 id="pays"
