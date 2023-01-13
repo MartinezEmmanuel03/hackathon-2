@@ -17,7 +17,7 @@ function AllVehicules() {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <div className="flex md:justify-evenly bg-gray-200">
         <h1 className="text-center text-2xl mb-5 mr-auto font-bold mt-20 m-2">
           Nos Véhicules
