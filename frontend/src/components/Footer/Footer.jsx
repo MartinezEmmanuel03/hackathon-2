@@ -11,7 +11,7 @@ function Footer() {
     <div className="bg-gray-300 text-black">
       <div className="flex flex-col  md:flex-row">
         <div className="flex  md:w-1/2">
-          <div className="flex  md:flex-col pl-10 justify-around mt-6">
+          <div className="flex  md:flex-col pl-12 justify-around mt-6">
             <Link to="/">
               <h2 className="  text-base md:text-xl font-bold hover:text-white m-2">
                 Accueil
@@ -34,21 +34,33 @@ function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-row justify-center items-center mb-4 md: ">
+        <div className="flex flex-row justify-center items-center mt-8">
           <a href="https://www.linkedin.com">
-            <img src={linkedin} alt="logo linkedin" className="w-12 m-3" />
+            <img
+              src={linkedin}
+              alt="logo linkedin"
+              className="w-12 m-3 lg:m-5"
+            />
           </a>
           <a href="https://twitter.com">
-            <img src={twitter} alt="logo twitter" className="w-12 m-3" />
+            <img src={twitter} alt="logo twitter" className="w-12 m-3 lg:m-5" />
           </a>
           <a href="https://www.facebook.com">
-            <img src={facebook} alt="logo facebook" className="w-12 m-3" />
+            <img
+              src={facebook}
+              alt="logo facebook"
+              className="w-12 m-3 lg:m-5"
+            />
           </a>
           <a href="https://www.youtube.com">
-            <img src={youtube} alt="logo youtube" className="w-12 m-3" />
+            <img src={youtube} alt="logo youtube" className="w-12 m-3 lg:m-5" />
           </a>
           <a href="https://www.instagram.com">
-            <img src={instagram} alt="logo instagram" className="w-12 m-3" />
+            <img
+              src={instagram}
+              alt="logo instagram"
+              className="w-12 m-3 lg:m-5"
+            />
           </a>
         </div>
         <div className="flex flex-row justify-center items-center mb-4 md:w-1/3" />
