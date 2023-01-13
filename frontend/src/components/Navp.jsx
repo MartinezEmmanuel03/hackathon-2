@@ -19,10 +19,10 @@ export default function NavP() {
               <p className="text-base leading-4">Commentary</p>
             </Link>
             <Link
-              to="Rental"
+              to="AddVehicule"
               className="flex hover:text-amber-500 focus:text-amber-500 text-white px-3 py-2 w-full"
             >
-              <p className="text-base leading-4">Rental</p>
+              <p className="text-base leading-4">Ajouter un véhicule</p>
             </Link>
           </div>
         </div>

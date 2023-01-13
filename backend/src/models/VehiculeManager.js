@@ -18,6 +18,23 @@ class vehiculeManager extends AbstractManager {
     );
   }
 
+  insert(vehicule, vehiculePhoto, vehiculeft) {
+    return this.connection.query(
+      `insert into ${this.table} (lieu, dateDispo, disp, typeV, prix, photo, FicheTech, nameV, film, km, id_users) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        vehicule.lieu,
+        vehicule.dateDispo,
+        vehicule.disp,
+        vehicule.typeV,
+        vehicule.prix,
+        vehiculePhoto,
+        vehiculeft,
+        vehicule.nameV,
+        vehicule.film,
+        vehicule.km,
+        vehicule.id_users,
+      ]
+    );
   findByFilm(searchMovie) {
     let query = `select film from ${this.table}`;
     const value = [];

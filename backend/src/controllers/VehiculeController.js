@@ -52,9 +52,30 @@ const random = (req, res) => {
     });
 };
 
+const add = (req, res) => {
+  let vehicule = req.body.data;
+  const vehiculePhoto = `public/assets${
+    req.files.images ? req.files.images[0].filename : "/images/Avatar.png"
+  }`;
+  const vehiculeft = `public/assets${
+    req.files.ft ? req.files.ft[0].filename : "/ft/cv.png"
+  }`;
+  vehicule = JSON.parse(vehicule);
+  models.vehicule
+    .insert(vehicule, vehiculePhoto, vehiculeft)
+    .then(([result]) => {
+      res.location(`/vehicules/${result.insertId}`).sendStatus(201);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 module.exports = {
   read,
   random,
   browse,
+  add,
   find,
 };
