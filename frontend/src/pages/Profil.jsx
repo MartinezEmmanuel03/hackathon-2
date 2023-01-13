@@ -133,12 +133,14 @@ function Profil() {
                 className="block w-full px-4 py-2 mt-2  focus:outline-none focus:ring "
               />
             </div>
-            <button
-              type="button"
-              className="w-32 ml-20 bg-gray-300 mt-5 rounded-md  md:bg-gray-500  hover:bg-gray-800 text-white font-bold py-2 px-4 border-b-4 md:w-64"
-            >
-              envoyer
-            </button>
+            <div className="flex justify-end mt-6">
+              <button
+                type="button"
+                className="w-32 ml-20 bg-gray-300 mt-5 rounded-md  md:bg-gray-500  hover:bg-gray-800 text-white font-bold py-2 px-4 border-b-4 md:w-64 md:ml-40"
+              >
+                envoyer
+              </button>
+            </div>
           </div>
         </form>
       </section>
