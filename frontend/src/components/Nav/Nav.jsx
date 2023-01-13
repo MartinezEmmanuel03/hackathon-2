@@ -14,7 +14,7 @@ function Nav() {
               to="/"
               className="text-xl font-bold leading-relaxed inline-block ml-4 py-2 whitespace-nowrap uppercase text-white"
             >
-              Home
+              Accueil
             </Link>
             <button
               className="btn text-white cursor-pointer text-xl leading-none pt-3 px-1 pb-2 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -38,11 +38,15 @@ function Nav() {
             id="example-navbar-danger"
           >
             <Link
-              to="/vehicules"
+
+              to="/a_propos"
               className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
             >
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
-              <span className="ml-2 md:text-xl">Catalogue</span>
+              <span className="ml-2 md:text-xl">A propos</span>
+
+           
+
             </Link>
             <Link
               to="/profil"
@@ -54,18 +58,18 @@ function Nav() {
             </Link>
 
             <Link
-              to="/page3"
+              to="/catalogue"
               className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
             >
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
-              <span className="ml-2 md:text-xl">Page3</span>
+              <span className="ml-2 md:text-xl">Catalogue</span>
             </Link>
             <Link
               to="/Dashboard/Information"
               className="px-3 py-2 md:pr-8 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
             >
               <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
-              <span className="ml-2 md:text-xl">Dashboard</span>
+              <span className="ml-2 md:text-xl">Administration</span>
             </Link>
             <div className="md:flex justify-end">
               <Link to="/login">
